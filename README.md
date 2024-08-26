@@ -33,3 +33,12 @@ This repository provides an automated solution for backing up PostgreSQL databas
    ```bash
    git clone <repository-url>
    cd <repository-directory>
+   ```
+2. Configure environment variables in a .env file:
+   ```DB_HOST=your_db_host
+DB_PORT=5432
+DB_USER=your_db_user
+DB_PASS=your_db_password
+DB_NAME=your_db_name
+RETENTION_DAYS=7
+```
