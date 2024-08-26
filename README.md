@@ -42,8 +42,8 @@ This repository provides an automated solution for backing up PostgreSQL databas
    DB_PASS=your_db_password
    DB_NAME=your_db_name
    RETENTION_DAYS=7
-  ```
+   ```
 3. Build and deploy the Docker container:
-  ```
+   ```
     docker-compose up -d
     ```
