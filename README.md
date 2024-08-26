@@ -47,3 +47,29 @@ This repository provides an automated solution for backing up PostgreSQL databas
    ```
     docker-compose up -d
     ```
+4. Verify backup creation:
+   ```
+      docker exec -it bica-backup /usr/local/bin/backup.sh
+   ```
+5. Monitor logs:
+   ```
+      docker logs bica-backup
+   ```
+6. Stop the backup service:
+   ```
+      docker-compose down
+   ```
+
+## Customizations
+
+- Adjust backup schedule by modifying cronfile
+- Enable backup encryption by uncommenting relevant lines in backup.sh
+- Modify retention policy by changing RETENTION_DAYS in .env
+
+## Troubleshooting
+
+- Ensure correct database connection details in .env
+- Check permissions of /mnt/backups directory
+- Verify cron job configuration in cronfile
+- Ensure restart: always policy is set in docker-compose.yml
+   
