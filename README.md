@@ -73,7 +73,7 @@ This repository provides an automated solution for backing up PostgreSQL databas
 
 ## If you want to test the backup locally (Manually)
    ```
-   # First make sure you Postgress server installed or you can install as follows:
+   # First make sure your Postgress server installed or you can install as follows:
    sudo apt-get update
    sudo apt-get install postgresql && apt install postgresql-client
 
