@@ -99,4 +99,5 @@ This repository provides an automated solution for backing up PostgreSQL databas
 - Check permissions of /mnt/backups directory
 - Verify cron job configuration in cronfile
 - Ensure restart: always policy is set in docker-compose.yml
+
    
