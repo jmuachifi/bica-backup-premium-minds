@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  backup:
+    build: .
+    container_name: py_bica_backup
+    volumes:
+      - /mnt/backups:/mnt/backups
+    environment:
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - DB_NAME=${DB_NAME}
+      - BACKUP_DIR=/mnt/backups
+      - RETENTION_DAYS=${RETENTION_DAYS}
+    restart: always

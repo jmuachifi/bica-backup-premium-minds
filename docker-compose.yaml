@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  bica-backup:
+    build: .
+    container_name: bica-backup
+    environment:
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - DB_NAME=${DB_NAME}
+      - BACKUP_DIR=/mnt/backups
+      - RETENTION_DAYS=${RETENTION_DAYS}
+    volumes:
+      - /mnt/backups:/mnt/backups
+    restart: always

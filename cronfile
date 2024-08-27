@@ -1,0 +1,2 @@
+# Cron job for database backup
+0 3,14 * * * /usr/local/bin/backup.sh >> /var/log/cron.log 2>&1
