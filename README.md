@@ -50,20 +50,20 @@ This repository provides an automated solution for backing up PostgreSQL databas
     ```
 4. Verify backup creation:
    ```
-      docker exec -it bica-backup /usr/local/bin/backup.sh
+   docker exec -it bica-backup /usr/local/bin/backup.sh
    ```
 > After running the script, check the BACKUP_DIR (e.g., /mnt/backups) to verify that a new backup file has been created. The file should be named something like bica-backup-YYYY-MM-DD_HHMM.tar.gz, where YYYY-MM-DD_HHMM is the timestamp
 5. Monitor logs:
    ```
-      docker logs bica-backup
+   docker logs bica-backup
    ```
 6. List all backup inside a container:
    ```
-      docker exec -it <container_name_or_id> ls -la /mnt/backups
+   docker exec -it <container_name_or_id> ls -la /mnt/backups
    ```
 7. Stop the backup service:
    ```
-      docker-compose down
+   docker-compose down
    ```
 8. If you want to decrypt the backup, use this cmd: <br>
       ```
