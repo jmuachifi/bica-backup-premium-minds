@@ -67,7 +67,7 @@ This repository provides an automated solution for backing up PostgreSQL databas
    ```
 8. If you want to decrypt the backup, use this cmd: <br>
       ```
-            sudo openssl enc -aes-256-cbc -d -pbkdf2 -salt -in /mnt/backups/bica-backup-2024-08-27_1428.tar.gz.enc -out /mnt/backups/bica-backup-2024-08-27_1428_decrypted.tar.gz -k "passwordencryption"
+      sudo openssl enc -aes-256-cbc -d -pbkdf2 -salt -in /mnt/backups/bica-backup-2024-08-27_1428.tar.gz.enc -out /mnt/backups/bica-backup-2024-08-27_1428_decrypted.tar.gz -k "passwordencryption"
    ```
  > Please, change *bica-backup-2024-08-27_1428.tar.gz.enc* with your backup file with specific data time <br>
 
